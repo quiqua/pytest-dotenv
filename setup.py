@@ -6,7 +6,7 @@ setup(
     name='pytest-dotenv',
     description=description,
     long_description=description,
-    version='0.1.0,
+    version='0.1.0',
     author='Marcel Radischat',
     author_email='marcel@quiqua.eu',
     url='https://github.com/quiqua/pytest-dotenv',
