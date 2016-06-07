@@ -10,6 +10,7 @@ setup(
     author='Marcel Radischat',
     author_email='marcel@quiqua.eu',
     url='https://github.com/quiqua/pytest-dotenv',
+    download_url='https://github.com/quiqua/pytest-dotenv/tarball/0.1.0',
     packages=['pytest_dotenv'],
     entry_points={'pytest11': ['env = pytest_dotenv.plugin']},
     install_requires=['pytest>=2.6.0', 'python-dotenv>=0.5.1'],
