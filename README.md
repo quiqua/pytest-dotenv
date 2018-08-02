@@ -26,3 +26,16 @@ env_files =
 
 The files will be loaded and added to the `os.environ` dict object before
 any tests are run.
+
+By default the plugin will not overwrite any variables already defined in the
+process' environment. If you want that behavior, you have to use the
+`env_override_existing_values` setting:
+
+```
+[pytest]
+env_override_existing_values = 1
+env_files =
+    ./.env
+    ./.test.env
+    ./.deploy.env
+```
