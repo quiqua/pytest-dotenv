@@ -18,7 +18,6 @@ def pytest_addoption(parser):
 
 @pytest.hookimpl(tryfirst=True)
 def pytest_load_initial_conftests(args, early_config, parser):
-    for file in early_config.getini("env_files"):
-        load_dotenv(
-            file, override=early_config.getini("env_override_existing_values")
-        )
+    _override = early_config.getini("env_override_existing_values")
+    for filename in early_config.getini("env_files"):
+        load_dotenv(filename, override=_override)
