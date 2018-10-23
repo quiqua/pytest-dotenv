@@ -19,13 +19,13 @@ You can list as many files as necessary:
 ```
 [pytest]
 env_files =
-    ./.env
-    ./.test.env
-    ./.deploy.env
+    .env
+    .test.env
+    .deploy.env
 ```
 
 The files will be loaded and added to the `os.environ` dict object before
-any tests are run.
+any tests are run. If the files are not found on the working directory, it will search for the files in the ancestor directory and upwards. 
 
 By default the plugin will not overwrite any variables already defined in the
 process' environment. If you want that behavior, you have to use the
@@ -35,7 +35,7 @@ process' environment. If you want that behavior, you have to use the
 [pytest]
 env_override_existing_values = 1
 env_files =
-    ./.env
-    ./.test.env
-    ./.deploy.env
+    .env
+    .test.env
+    .deploy.env
 ```
