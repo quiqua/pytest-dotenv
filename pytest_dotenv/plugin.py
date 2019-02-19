@@ -9,7 +9,7 @@ def pytest_addoption(parser):
     parser.addini("env_files",
                   type="linelist",
                   help="a line separated list of env files to parse",
-                  default=[])
+                  default=['.env'])
     parser.addini("env_override_existing_values",
                   type="bool",
                   help="override the existing environment variables",
