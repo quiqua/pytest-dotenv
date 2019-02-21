@@ -12,7 +12,7 @@ $ pip install pytest-dotenv
 
 ## Basic Usage
 
-If all you want is to load environment variables from a `.env` file then installing the plugin is all that is needed. `python-dotenv` will automatically detect your `.env` file and load it. By default, the plugin won't override any existing system variables. 
+If all you want is to load environment variables from a `.env` file then installing the plugin is all that is needed. `python-dotenv` will automatically detect your `.env` file and load it. By default, the plugin won't override any existing system variables.
 
 
 ## Non-default configuration
@@ -31,11 +31,11 @@ env_files =
 ```
 
 The files will be loaded and added to the `os.environ` dict object before
-any tests are run. If the files are not found on the working directory, it will search for the files in the ancestor directory and upwards. 
+any tests are run. If the files are not found on the working directory, it will search for the files in the ancestor directory and upwards.
 
 ### Overriding Existing Values
 
-By default the plugin will not overwrite any variables already defined in the
+By default the plugin will not override any variables already defined in the
 process' environment. If you want that behavior, you have to use the
 `env_override_existing_values` setting:
 
