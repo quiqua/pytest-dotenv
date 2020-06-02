@@ -12,7 +12,7 @@ setup(
     url='https://github.com/quiqua/pytest-dotenv',
     download_url='https://github.com/quiqua/pytest-dotenv/tarball/0.2.0',
     packages=['pytest_dotenv'],
-    entry_points={'pytest11': ['env = pytest_dotenv.plugin']},
+    entry_points={'pytest11': ['dotenv = pytest_dotenv.plugin']},
     install_requires=['pytest>=2.6.0', 'python-dotenv>=0.9.1'],
     classifiers=[
         'Development Status :: 4 - Beta',
