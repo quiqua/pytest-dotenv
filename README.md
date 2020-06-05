@@ -47,3 +47,8 @@ env_files =
     .test.env
     .deploy.env
 ```
+
+### Alternative: Specify the file at the command line
+
+You also have the option to run your tests with `py.test --envfile path/to/.env`.
+This will load all defined environment variables and overwrite any existing ones regardless of the configuration `env_override_existing_values`.
