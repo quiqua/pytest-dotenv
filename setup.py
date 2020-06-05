@@ -12,7 +12,7 @@ setup(
     name='pytest-dotenv',
     description=description,
     long_description=long_description,
-    long_description_content_type='text/markdown'
+    long_description_content_type='text/markdown',
     version='0.5.1',
     author='Marcel Radischat',
     author_email='marcel@quiqua.eu',
