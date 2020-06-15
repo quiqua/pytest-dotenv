@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from unittest import mock
 
+
 def test_ini_file(testdir):
     with mock.patch.dict('os.environ', clear=True):
         testdir.makeini("""
