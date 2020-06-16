@@ -152,3 +152,37 @@ def test_file_argument_force_overwrite(testdir):
 
     # make sure that that we get a '0' exit code for the testsuite
     assert result.ret == 0
+
+
+@pytest.mark.usefixtures("mock_os_environ")
+def test_env_is_set_before_test_session_is_started(testdir):
+    testdir.makeini("""
+        [pytest]
+        env_files =
+            myenv.txt
+    """)
+
+    testdir.maketxtfile(myenv="FOO=BAR")
+    testdir.makeconftest("""
+        import os
+        
+        assert os.environ.get('FOO') == 'BAR'
+    """)
+    # create a temporary pytest test module
+    testdir.makepyfile("""
+        import os
+
+        def test_env_foo():
+            assert os.environ.get('FOO') == 'BAR'
+    """)
+
+    # run pytest with the following cmd args
+    result = testdir.runpytest("-v")
+
+    # fnmatch_lines does an assertion internally
+    result.stdout.fnmatch_lines([
+        '*::test_env_foo PASSED*',
+    ])
+
+    # make sure that that we get a '0' exit code for the testsuite
+    assert result.ret == 0
