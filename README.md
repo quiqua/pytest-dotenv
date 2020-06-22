@@ -19,7 +19,7 @@ If all you want is to load environment variables from a `.env` file then install
 
 ### Custom Environment Variable Files
 
-Add a new section to a config file named `env_vars`.
+Add a new section named `env_files` to your pytest config file.
 You can list as many files as necessary:
 
 ```
