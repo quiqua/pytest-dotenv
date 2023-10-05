@@ -15,7 +15,7 @@ pip install pytest-dotenv
 ## Basic Usage
 
 If all you want is to load environment variables from a `.env` file then
-installing the plugin is all that is needed. `python-dotenv` will automatically
+installing the plugin is all that is needed. `pytest-dotenv` will automatically
 detect your `.env` file and load it. By default, the plugin won't override any
 existing system variables.
 
