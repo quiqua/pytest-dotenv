@@ -28,7 +28,6 @@ def pytest_load_initial_conftests(args, early_config, parser):
         load_dotenv(find_dotenv(filename, usecwd=True), override=_override)
 
 
-def pytest_sessionstart(session):
-    config = session.config
+def pytest_cmdline_main(config):
     if config.getoption("envfile", default=None) is not None:
         load_dotenv(dotenv_path=config.getoption("envfile"), override=True)
