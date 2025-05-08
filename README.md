@@ -59,3 +59,12 @@ You also have the option to run your tests with `py.test --envfile
 path/to/.env`.  This will load all defined environment variables and overwrite
 any existing ones regardless of the configuration
 `env_override_existing_values`.
+
+## Contributing / Testing
+
+Instructions on how to execute unit-tests:
+```bash
+pip install pytest python-dotenv
+pip install -e .
+pytest -v tests/
+```
