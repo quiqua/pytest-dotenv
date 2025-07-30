@@ -1,3 +1,7 @@
+# Discontinued
+
+This project is not maintained any longer - sorry for any inconvenience this might cause.
+
 # pytest-dotenv
 
 This little plugin uses `python-dotenv` to load any environment variables from
